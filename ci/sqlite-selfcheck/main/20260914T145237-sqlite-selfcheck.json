@@ -1,0 +1,472 @@
+{
+  "baseline": "sqlite",
+  "baseline_commit": "4f4e47087147aaa6b2b0e70fa802b297871863e9",
+  "entry_commit": "4f4e47087147aaa6b2b0e70fa802b297871863e9",
+  "env": {
+    "ci_run": "34858088538",
+    "cpu_count": 4,
+    "docker": "28.0.4",
+    "in_container": false,
+    "limits": {
+      "as_user": true,
+      "cpus": 2.0,
+      "memory": "2g",
+      "network": "host"
+    },
+    "machine": "x86_64",
+    "mode": "docker",
+    "os": "Linux 6.17.0-1022-azure",
+    "python": "3.12.3",
+    "ram_bytes": 16766414848,
+    "sqlite_source": "pinned-image",
+    "sqlite_version": "3.46.1",
+    "tools_commit": "4f4e47087147aaa6b2b0e70fa802b297871863e9"
+  },
+  "geomean_ratio": 1.0056,
+  "measured_at": "2026-09-14T14:52:37+0000",
+  "mode": "docker",
+  "name": "sqlite-selfcheck",
+  "noisy": true,
+  "ok": true,
+  "phases": {
+    "01_insert": {
+      "baseline": {
+        "all_seconds": [
+          0.308978,
+          0.279313,
+          0.290624,
+          0.345462,
+          0.285727
+        ],
+        "datadir_bytes": 4345312,
+        "max_seconds": 0.345462,
+        "median_seconds": 0.290624,
+        "min_seconds": 0.279313,
+        "noisy": true,
+        "qps": 25806.5,
+        "spread": 0.2276,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 7500,
+      "ratio": 0.9761,
+      "repeat": 1,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.297732,
+          0.470731,
+          0.297728,
+          0.275732,
+          0.277733
+        ],
+        "datadir_bytes": 4345312,
+        "max_seconds": 0.470731,
+        "median_seconds": 0.297728,
+        "min_seconds": 0.275732,
+        "noisy": true,
+        "qps": 25190.8,
+        "spread": 0.655,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "02_point_select_uniform": {
+      "baseline": {
+        "all_seconds": [
+          0.200936,
+          0.207903,
+          0.204838,
+          0.207988,
+          0.199913
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.207988,
+        "median_seconds": 0.204838,
+        "min_seconds": 0.199913,
+        "noisy": false,
+        "qps": 73228.6,
+        "spread": 0.0394,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 15000,
+      "ratio": 1.0119,
+      "repeat": 10,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.204371,
+          0.20182,
+          0.202428,
+          0.205082,
+          0.201858
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.205082,
+        "median_seconds": 0.202428,
+        "min_seconds": 0.20182,
+        "noisy": false,
+        "qps": 74100.4,
+        "spread": 0.0161,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "03_point_select_zipf": {
+      "baseline": {
+        "all_seconds": [
+          0.181187,
+          0.188374,
+          0.189219,
+          0.183176,
+          0.186994
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.189219,
+        "median_seconds": 0.186994,
+        "min_seconds": 0.181187,
+        "noisy": false,
+        "qps": 80216.5,
+        "spread": 0.0429,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 15000,
+      "ratio": 1.0196,
+      "repeat": 10,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.186265,
+          0.189584,
+          0.181513,
+          0.183395,
+          0.183158
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.189584,
+        "median_seconds": 0.183395,
+        "min_seconds": 0.181513,
+        "noisy": false,
+        "qps": 81790.7,
+        "spread": 0.044,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "04_scan_filter": {
+      "baseline": {
+        "all_seconds": [
+          0.384234,
+          0.357081,
+          0.349328,
+          0.400416,
+          0.341491
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.400416,
+        "median_seconds": 0.357081,
+        "min_seconds": 0.341491,
+        "noisy": true,
+        "qps": 10501.8,
+        "spread": 0.165,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 3750,
+      "ratio": 1.0204,
+      "repeat": 10,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.376374,
+          0.349935,
+          0.382354,
+          0.343506,
+          0.34549
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.382354,
+        "median_seconds": 0.349935,
+        "min_seconds": 0.343506,
+        "noisy": false,
+        "qps": 10716.3,
+        "spread": 0.111,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "05_update": {
+      "baseline": {
+        "all_seconds": [
+          0.29588,
+          0.29206,
+          0.338959,
+          0.296851,
+          0.294847
+        ],
+        "datadir_bytes": 4206048,
+        "max_seconds": 0.338959,
+        "median_seconds": 0.29588,
+        "min_seconds": 0.29206,
+        "noisy": true,
+        "qps": 40557.0,
+        "spread": 0.1585,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 12000,
+      "ratio": 1.003,
+      "repeat": 8,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.294926,
+          0.321685,
+          0.287891,
+          0.298859,
+          0.295003
+        ],
+        "datadir_bytes": 4206048,
+        "max_seconds": 0.321685,
+        "median_seconds": 0.295003,
+        "min_seconds": 0.287891,
+        "noisy": false,
+        "qps": 40677.6,
+        "spread": 0.1146,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "06_delete_reinsert": {
+      "baseline": {
+        "all_seconds": [
+          0.385621,
+          0.373519,
+          0.395832,
+          0.373496,
+          0.403539
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.403539,
+        "median_seconds": 0.385621,
+        "min_seconds": 0.373496,
+        "noisy": false,
+        "qps": 31118.6,
+        "spread": 0.0779,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 12000,
+      "ratio": 1.016,
+      "repeat": 8,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.377536,
+          0.371691,
+          0.398712,
+          0.459592,
+          0.379555
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.459592,
+        "median_seconds": 0.379555,
+        "min_seconds": 0.371691,
+        "noisy": true,
+        "qps": 31616.0,
+        "spread": 0.2316,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "07_bulk_insert": {
+      "baseline": {
+        "all_seconds": [
+          0.388425,
+          0.371725,
+          0.396205,
+          0.482432,
+          0.374244
+        ],
+        "datadir_bytes": 4365792,
+        "max_seconds": 0.482432,
+        "median_seconds": 0.388425,
+        "min_seconds": 0.371725,
+        "noisy": true,
+        "qps": 30894.0,
+        "spread": 0.285,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 12000,
+      "ratio": 1.0158,
+      "repeat": 1,
+      "season": "S1",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.364257,
+          0.382399,
+          0.542778,
+          0.819928,
+          0.3783
+        ],
+        "datadir_bytes": 4365792,
+        "max_seconds": 0.819928,
+        "median_seconds": 0.382399,
+        "min_seconds": 0.364257,
+        "noisy": true,
+        "qps": 31380.8,
+        "spread": 1.1916,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "08_order_limit": {
+      "baseline": {
+        "all_seconds": [
+          0.321188,
+          0.321484,
+          0.319303,
+          0.32123,
+          0.319331
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.321484,
+        "median_seconds": 0.321188,
+        "min_seconds": 0.319303,
+        "noisy": false,
+        "qps": 9340.3,
+        "spread": 0.0068,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 3000,
+      "ratio": 0.9901,
+      "repeat": 8,
+      "season": "S2",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.326938,
+          0.319348,
+          0.324412,
+          0.324228,
+          0.326297
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.326938,
+        "median_seconds": 0.324412,
+        "min_seconds": 0.319348,
+        "noisy": false,
+        "qps": 9247.5,
+        "spread": 0.0234,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "09_range_scan": {
+      "baseline": {
+        "all_seconds": [
+          0.429658,
+          0.411664,
+          0.412979,
+          0.418641,
+          0.42368
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.429658,
+        "median_seconds": 0.418641,
+        "min_seconds": 0.411664,
+        "noisy": false,
+        "qps": 8957.6,
+        "spread": 0.043,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 3750,
+      "ratio": 1.0073,
+      "repeat": 5,
+      "season": "S2",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.413039,
+          0.415626,
+          0.413958,
+          0.415822,
+          0.419655
+        ],
+        "datadir_bytes": 4201952,
+        "max_seconds": 0.419655,
+        "median_seconds": 0.415626,
+        "min_seconds": 0.413039,
+        "noisy": false,
+        "qps": 9022.5,
+        "spread": 0.0159,
+        "status": "ok",
+        "verify": "pass"
+      }
+    },
+    "10_join_aggregate": {
+      "baseline": {
+        "all_seconds": [
+          0.758979,
+          0.763882,
+          0.760628,
+          0.761627,
+          0.767556
+        ],
+        "datadir_bytes": 4189664,
+        "max_seconds": 0.767556,
+        "median_seconds": 0.761627,
+        "min_seconds": 0.758979,
+        "noisy": false,
+        "qps": 886.3,
+        "spread": 0.0113,
+        "status": "ok",
+        "verify": "pass"
+      },
+      "queries": 675,
+      "ratio": 0.997,
+      "repeat": 3,
+      "season": "S3",
+      "status": "ok",
+      "target": {
+        "all_seconds": [
+          0.763893,
+          0.765692,
+          0.760644,
+          0.760853,
+          0.765773
+        ],
+        "datadir_bytes": 4189664,
+        "max_seconds": 0.765773,
+        "median_seconds": 0.763893,
+        "min_seconds": 0.760644,
+        "noisy": false,
+        "qps": 883.6,
+        "spread": 0.0067,
+        "status": "ok",
+        "verify": "pass"
+      }
+    }
+  },
+  "runs": 5,
+  "schema": 2,
+  "score": 1.0046,
+  "season": "S3",
+  "totals": {
+    "baseline_seconds": 3.610919,
+    "target_seconds": 3.594374
+  },
+  "warmup": true
+}
